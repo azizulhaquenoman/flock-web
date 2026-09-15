@@ -1,0 +1,220 @@
+/* ===== Signup Card ===== */
+.signup {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+    background-color: transparent;
+    border: none;
+    box-shadow: none;
+    padding: 28px 24px 24px;
+    width: 100%;
+    max-width: 488px;
+    box-sizing: border-box;
+}
+
+.signup-title {
+    display: block;
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-main);
+    margin-bottom: 2px;
+    letter-spacing: -0.3px;
+}
+
+.signup::before {
+    content: 'Quick and easy';
+    display: block;
+    font-size: 14px;
+    color: var(--color-text-secondary);
+    margin-bottom: 20px;
+    font-family: 'Inter', sans-serif;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.input-field label {
+    display: block;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+    margin-bottom: 4px;
+    letter-spacing: 0.1px;
+}
+
+.input-field input[type="text"],
+.input-field input[type="password"],
+.input-field input[type="email"] {
+    width: 100%;
+    padding: 12px 14px;
+    font-size: 15px;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    outline: none;
+    box-sizing: border-box;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease, background-color 0.18s ease;
+}
+
+.input-field input[type="text"]:focus,
+.input-field input[type="password"]:focus,
+.input-field input[type="email"]:focus {
+    border-color: var(--color-border-focus);
+    background-color: var(--color-focus-bg);
+    box-shadow: none;
+}
+
+.input-field input::placeholder {
+    color: var(--color-placeholder);
+    font-size: 14px;
+}
+
+.input-field select {
+    padding: 10px 12px;
+    font-size: 14px;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-text-main);
+    background-color: var(--color-bg-light);
+    border: 1px solid var(--color-border);
+    border-radius: 6px;
+    outline: none;
+    cursor: pointer;
+    box-sizing: border-box;
+    transition: border-color 0.18s ease, box-shadow 0.18s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='8' viewBox='0 0 12 8'%3E%3Cpath d='M1 1l5 5 5-5' stroke='%23606770' stroke-width='1.5' fill='none' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 12px center;
+    padding-right: 32px;
+}
+
+.input-field select:focus {
+    border-color: var(--color-border-focus);
+    box-shadow: none;
+    background-color: var(--color-focus-bg);
+}
+
+.birth-date {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: auto auto;
+    column-gap: 8px;
+    row-gap: 6px;
+}
+
+.birth-date>label {
+    grid-column: 1 / -1;
+    font-size: 12px;
+    font-weight: 600;
+    color: var(--color-text-secondary);
+}
+
+.name,
+.username,
+.gender,
+.password {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.password {
+    gap: 8px;
+}
+
+.button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+}
+
+.submit {
+    width: 100%;
+    padding: 14px;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-white);
+    background-color: var(--color-primary-light);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.2px;
+    transition: background-color 0.18s ease, box-shadow 0.18s ease, transform 0.1s ease;
+}
+
+.submit:hover {
+    background-color: var(--color-primary);
+    box-shadow: 0 2px 8px var(--color-primary-shadow);
+}
+
+.submit:active {
+    background-color: var(--color-primary-dark);
+    transform: scale(0.99);
+}
+
+.have-account-button {
+    width: 100%;
+    padding: 10px 20px;
+    font-size: 14px;
+    font-weight: 600;
+    font-family: 'Inter', sans-serif;
+    color: var(--color-primary);
+    background-color: transparent;
+    border: 1.5px solid var(--color-primary);
+    border-radius: 6px;
+    cursor: pointer;
+    letter-spacing: 0.1px;
+    transition: background-color 0.18s ease, color 0.18s ease, box-shadow 0.18s ease;
+}
+
+.have-account-button:hover {
+    background-color: var(--color-primary-hover);
+    box-shadow: 0 1px 4px var(--color-primary-shadow-light);
+}
+
+.have-account-button:active {
+    background-color: var(--color-primary-lightest);
+}
+
+@media (max-width: 480px) {
+    .signup {
+        padding: 22px 16px 20px;
+        max-width: 100%;
+    }
+
+    .signup-title {
+        font-size: 18px;
+    }
+
+    .submit {
+        font-size: 15px;
+        padding: 13px;
+    }
+
+    .birth-date {
+        grid-template-columns: repeat(3, 1fr);
+        gap: 6px;
+    }
+
+    .have-account-button {
+        font-size: 13px;
+        padding: 9px 16px;
+    }
+}
+
+@media (max-width: 360px) {
+    .birth-date {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .birth-date>select:last-of-type {
+        grid-column: 1 / -1;
+    }
+}

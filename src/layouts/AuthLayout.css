@@ -1,0 +1,13 @@
+/* ===== Google Font ===== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ===== Page Layout ===== */
+.auth-layout {
+    min-height: 100vh;
+    background-color: var(--color-bg-light);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 24px 16px;
+    box-sizing: border-box;
+}
